@@ -1,0 +1,47 @@
+= Example with Graphql Spring Boot and Netflix
+
+== Introduction
+
+This is a simple example with Spring Boot, working with GraphQL and using the netflix framework DGS.
+If you want more information you can take a look into the next article: https://refactorizando.com/ejemplo-graphql-spring-boot-netflix-dgs
+
+
+== How does it run
+
+This a normal Spring Boot aplication so if you want to run it:
+
+    mvn spring-boot:run
+
+
+== How can I check it?
+
+if you want to make some test after run it you can go to:
+
+    http://localhost:8080/graphiql
+
+and run the next json
+
+    mutation CREATE {
+        createBank(bank:
+            {name: "Santander", country:"Spain"}) {
+                 id
+                 name
+                 country
+            }
+    }
+
+and after that you can use the next json to get all banks:
+
+    {
+        banks{
+            id
+            name
+            country
+        }
+    }
+
+
+
+
+
+
