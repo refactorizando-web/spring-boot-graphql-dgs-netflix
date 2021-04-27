@@ -1,0 +1,23 @@
+extend type QueryResolver {
+    accounts: [Account]
+    account(id: ID!): Account!
+}
+
+extend type MutationResolver {
+    createAccount(account: AccountInput!): Account
+}
+
+input AccountInput {
+    name: String!
+    alias: String!
+    amount: Float
+    userId: String!
+    bankId: String!
+}
+
+type Account {
+    id: ID!
+    name: String!
+    user: User!
+    bank: Bank!
+}

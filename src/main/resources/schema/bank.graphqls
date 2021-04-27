@@ -1,0 +1,22 @@
+extend type QueryResolver {
+    banks: [Bank]
+    bank(id: String!): Bank!
+}
+
+extend type MutationResolver {
+    createBank(bank: BankInput!): Bank
+}
+
+input BankInput {
+    name: String!
+    country: String!
+}
+
+type Bank {
+    id: ID!
+    name: String!
+    country: String!
+    users: [User]
+    accounts: [Account]
+}
+

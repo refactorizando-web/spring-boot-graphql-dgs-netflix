@@ -1,0 +1,34 @@
+type QueryResolver {
+    users: [User]
+    user(id: ID!): User!
+}
+
+type MutationResolver {
+    createUser(user: UserInput!): User
+}
+
+input UserInput {
+    firstName: String!
+    lastName: String!
+    address: String!
+    country: String!
+    city: String!
+    age: Int
+}
+
+type User {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    address: String!
+    country: String!
+    city: String!
+    age: Int!
+    bank: Bank
+    accounts: [Account]
+}
+
+schema {
+    query: QueryResolver
+    mutation: MutationResolver
+}
