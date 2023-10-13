@@ -3,7 +3,10 @@
 == Introduction
 
 This is a simple example with Spring Boot, working with GraphQL and using the netflix framework DGS.
-If you want more information you can take a look into the next article: https://refactorizando.com/ejemplo-graphql-spring-boot-netflix-dgs
+If you want more information you can take a look into the next article: 
+
+* SPANISH: https://refactorizando.com/ejemplo-graphql-spring-boot-netflix-dgs
+* ENGLISH: https://refactorizando.com/en/graphql-example-spring-boot-netflix-dgs/
 
 
 == How does it run
